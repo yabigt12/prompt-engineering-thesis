@@ -1,0 +1,11 @@
+I would like you to write the second part of an article. The software development company iteratec has implemented a
+project for the customer [CUSTOMER]. First, I'll provide you with a summary of the project.
+Then an explanation of what information should be included in the paragraph.
+
+The following information about the project is available:
+[PROJECT INFORMATION]
+
+This part should have a sub header labled ""Added value for the end customer/user"".
+Explain each points more with atleast 500 words
+
+Write the second part of an article about the project of the development company Iteratec with the customer [CUSTOMER]. Follow the guidelines exactly.

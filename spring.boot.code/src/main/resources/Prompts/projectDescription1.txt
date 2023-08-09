@@ -1,0 +1,22 @@
+"Project Description Long": "Who knows whether their vaccination status is right, when another dentist appointment is due or when cancer screening is due?
+                             Even we felt the same way. That's why we invented the APPzumARZT. It keeps track of your prevention status, reminds you of check-ups,
+                             vaccinations and dental checks, helping you to retain your bonus benefits and - of course - to stay healthy.
+                             And with the integrated FOCUS-Gesundheit doctor search, you can find the right doctor right away.
+
+                             The APPzumARZT is the automatic health manager that reminds you of all vaccinations, preventive measures, U/J examinations and dental appointments.
+                             An app for all prevention services of your statutory health insurance. It doesn't matter which one! Including the FOCUS health doctor search.",
+"Project description short": "All prevention appointments. In an app. For the whole family.",
+"Challenge": "Develop an app that is so user-friendly and understandable that more people use the preventive services of statutory health insurance companies
+              and thus create greater awareness of preventive health measures..",
+"Added value for the customer": "",
+"Added value for the end customer / user": " Automatic health manager for reminders of all vaccinations, preventive measures, U-/J-examinations and dental appointments
+                                            An app for all prevention services of the statutory health insurance
+                                            FOCUS health doctor search.",
+"iteratec services": "Complete redesign and creation of high-quality click prototypes in the conception phase
+                      Saving of development costs for iOS and Android by using the cross-platform technology Flutter
+                      Seamless connection of external services from partners
+                      Local storage of the data - for the best possible data protection
+                      Migration of user data from previous app
+                      Ongoing deployment of the app during development for quick feedback from testers
+                      Automation of the tests for calculating statutory preventive services - for the simplest possible further development and for stable operation of the app.",
+"Topics / Technologies": "Flutter, SQLite, Android, iOS"

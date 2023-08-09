@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Article about Iteratec's Project with [CUSTOMER]</title>
+</head>
+<body>
+<h1>Project Description: APPzumARZT</h1>
+<p>The software development company Iteratec has implemented a project for the customer [CUSTOMER]. The project, called APPzumARZT, is an automatic health manager app that aims to improve awareness and usage of preventive health measures provided by statutory health insurance companies. The app keeps track of vaccination schedules, preventive measures, U-/J-examinations, and dental appointments, ensuring that users stay up-to-date with their health check-ups and retain their bonus benefits. Additionally, the app includes the FOCUS health doctor search feature, allowing users to find the right doctor easily. The project's main challenge was to develop a user-friendly and understandable app that encourages more people to utilize preventive services. Iteratec provided services such as complete redesign, creation of high-quality click prototypes, cross-platform technology implementation using Flutter, seamless integration of external services, local data storage for enhanced data protection, migration of user data from the previous app, ongoing deployment for quick feedback, and automation of tests for calculating statutory preventive services. The technologies used in this project include Flutter, SQLite, Android, and iOS.</p>
+</body>
+</html>

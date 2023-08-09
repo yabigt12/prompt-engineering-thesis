@@ -1,0 +1,17 @@
+I would like you to write an article about a project. First, I'll provide you with some information about the project.
+Then some instructions of how the article should be structured.
+
+The following information about the project is available:
+[PROJECT INFORMATION]
+
+Here are some instruction for the structure of the article. It is important that the article follows the following structure exactly. Each point must be included in the article.
+1. The title of the article should be the name of the project.
+1. Start the article with a paragraph describing what the project is about. This should be atleast 5 sentences
+3. There should be a sub header 'Added value for the customer' if given.
+2. There should be a sub header 'Added value for the end user' if given.
+3. There should be a sub header 'iteratec services' if given.
+4. There should be a sub header 'challenge' if given.
+5. Each sub header should contain bullet points with small explanation with atleast 3 sentences.
+6. the last paragraph should be a summary.
+
+Write an article about the project of the development company Iteratec with the customer [CUSTOMER].

@@ -1,0 +1,31 @@
+"Project Description Long": "The development and production of cars are highly complex and complicated processes. Instead of a drawing board and notebook, digital tools are of course also used for this. The road from paper-based work to a fully digitized working world is long. Mercedes-Benz (formerly Daimler) has been on this path for a long time and has already implemented some digitalization steps.
+
+                             AppManufaktur is a joint initiative by Mercedes-Benz and iteratec to successfully continue along this path. It is an interdisciplinary team working on multiple applications and services. Depending on the focus set, the team flexibly develops one or the other topic. The applications now include applications for planners, foremen, production workers and other specialist areas. Processes in production line construction, in production planning and in production are digitally mapped and supported.
+
+                             The link across all apps is the "proplan" basic system, which was originally developed by ArsNova. The AppManufaktur applications use the production planning and development data contained therein.
+
+                             The team started in 2015 with the first app "SRA" (Station Readiness Analysis). This planner app facilitates acceptance through customizable checks and the associated management of measures to achieve the commissioning of a production line.
+
+                             Due to working in remote areas without secure internet connection, offline capability is an important feature of this application.
+
+                             More apps and services were added later. This includes "Drift" for personnel planning by foremen in production.
+
+                             Another service is "KI-iLOG" for AI-supported planning of the intra-logistics processes of future series and models.
+
+                             All applications help to close gaps in the digitized world of work and to be able to do work more reliably, easily and securely.",
+"Project description short": "We help to keep production running.",
+"Challenge": "A team with many applications and different departments.",
+"unique selling point": "An app cosmos built around the customer's central inventory system.",
+"Added value for the customer": "Previous media breaks could be removed. Faster and more efficient processing of e.g. B. Commissioning of production facilities, legally binding approvals, production deployment planning or work steps in the production process.​
+                                 The same applications can be used in all production plants worldwide.
+                                 High customer satisfaction and high added value, since iteratec was able to offer and implement the complete implementation and support from a single source.",
+"Added value for the end customer / user": "No more Excel files with different versions in circulation.
+                                            Current data that is obtained directly from the source system proplan.
+                                            Easier access to work data, also for suppliers, thanks to web applications.
+                                            Easier tracking of activities and measures, thereby reducing sources of error.",
+"iteratec services": "iteratec delivers the complete solution from app design, conception and implementation of frontend, backend and interface integration to application management.​
+                      Design of the solutions based on fast innovation cycles, which determine the UI/UX, the screen flow and the functionalities through early, regular and iterative feedback.
+                      Construction and further development of a common framework for the efficient and effective development of apps based on the same technological basis.
+                      Provision of 2nd and 3rd level support for user support, ensuring operations and increasing customer benefit and customer satisfaction.",
+"project duration": "2015 to present",
+"Topics / Technologies": "Scrum, Kanban, UI-Design, UX-Design, BPMN, Java, JEE, JavaScript, TypeScript, Dojo, WebSphere, Oracle DB"

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AppManufaktur: Enhancing Digitalization in Car Production</title>
+</head>
+<body>
+  <h1>AppManufaktur: Enhancing Digitalization in Car Production</h1>
+  
+  <h2>Introduction</h2>
+  <p>The AppManufaktur project is a joint initiative by Mercedes-Benz and iteratec aimed at furthering the digitalization efforts in car production. The project involves an interdisciplinary team working on multiple applications and services to streamline and optimize various processes in production line construction, planning, and execution. The team has developed a range of applications catering to different roles and departments within the production ecosystem.</p>
+  
+  <h2>Added Value for the Customer</h2>
+  <ul>
+    <li>Removal of previous media breaks, resulting in faster and more efficient processing of tasks such as commissioning of production facilities, approvals, and production deployment planning.</li>
+    <li>Ability to use the same applications in all production plants worldwide, ensuring consistency and standardization.</li>
+    <li>High customer satisfaction and added value due to iteratec's comprehensive implementation and support from a single source.</li>
+  </ul>
+  
+  <h2>Added Value for the End User</h2>
+  <ul>
+    <li>No more Excel files with different versions in circulation, ensuring up-to-date and accurate data obtained directly from the source system.</li>
+    <li>Easier access to work data, including for suppliers, through user-friendly web applications.</li>
+    <li>Improved tracking of activities and measures, reducing sources of error and enhancing overall efficiency.</li>
+  </ul>
+  
+  <h2>iteratec Services</h2>
+  <ul>
+    <li>iteratec delivers end-to-end solutions, including app design, conception, implementation of frontend, backend, and interface integration, as well as application management.</li>
+    <li>The solutions are designed based on fast innovation cycles, incorporating early and iterative feedback to determine UI/UX, screen flow, and functionalities.</li>
+    <li>Construction and continuous development of a common framework for efficient and effective app development based on the same technological foundation.</li>
+    <li>Provision of 2nd and 3rd level support for user assistance, ensuring smooth operations and maximizing customer satisfaction.</li>
+  </ul>
+  
+  <h2>Challenge</h2>
+  <ul>
+    <li>The project involves managing a team working on multiple applications and catering to different departments, requiring effective coordination and collaboration.</li>
+  </ul>
+  
+  <p><strong>Summary:</strong> The AppManufaktur project by Mercedes-Benz and iteratec aims to enhance the digitalization efforts in car production. Through a range of applications and services, the project offers added value for both the customer and end users by eliminating media breaks, providing standardized solutions, and improving access to accurate data. iteratec's comprehensive services ensure the successful implementation and support of the project, while effectively managing the challenges of a diverse team and multiple applications.</p>
+</body>
+</html>
