@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Project Article</title>
+<title>APPzumARZT - Project Article</title>
 </head>
 <body>
-<h1>Project Article: [CUSTOMER]</h1>
+<h1>APPzumARZT</h1>
+<p>Who knows whether their vaccination status is right, when another dentist appointment is due or when cancer screening is due? Even we felt the same way. That's why we invented the APPzumARZT. It keeps track of your prevention status, reminds you of check-ups, vaccinations and dental checks, helping you to retain your bonus benefits and - of course - to stay healthy. And with the integrated FOCUS-Gesundheit doctor search, you can find the right doctor right away.</p>
+<p>The APPzumARZT is the automatic health manager that reminds you of all vaccinations, preventive measures, U/J examinations and dental appointments. An app for all prevention services of your statutory health insurance. It doesn't matter which one! Including the FOCUS health doctor search.</p>
 
-<h2>Introduction</h2>
-<p>The software development company iteratec has implemented a project for the customer [CUSTOMER]. The project, called APPzumARZT, is a user-friendly app designed to help individuals keep track of their prevention status, including vaccinations, check-ups, and dental appointments. The app aims to create greater awareness of preventive health measures and encourage more people to utilize the preventive services offered by statutory health insurance companies.</p>
-<p>What sets APPzumARZT apart is its comprehensive approach to prevention services, catering to the needs of the whole family. With the integrated FOCUS-Gesundheit doctor search, users can easily find the right doctor for their specific needs. The project addresses the common challenge of individuals not being aware of their vaccination status or when preventive measures are due, providing a solution that promotes better health management.</p>
+<h2>Added value for the customer</h2>
+<ul>
+<li>Complete redesign and creation of high-quality click prototypes in the conception phase</li>
+<li>Saving of development costs for iOS and Android by using the cross-platform technology Flutter</li>
+<li>Seamless connection of external services from partners</li>
+<li>Local storage of the data - for the best possible data protection</li>
+<li>Migration of user data from previous app</li>
+<li>Ongoing deployment of the app during development for quick feedback from testers</li>
+<li>Automation of the tests for calculating statutory preventive services - for the simplest possible further development and for stable operation of the app</li>
+</ul>
 
-<h2>Added Value for the End Customer/User</h2>
-<p>The APPzumARZT app serves as an automatic health manager, reminding users of all their preventive measures, including vaccinations, U/J examinations, and dental appointments. It consolidates all prevention services offered by statutory health insurance companies, ensuring that users never miss an important check-up. Additionally, the integration of the FOCUS health doctor search simplifies the process of finding the right healthcare professional.</p>
+<h2>Added value for the end user</h2>
+<ul>
+<li>Automatic health manager for reminders of all vaccinations, preventive measures, U-/J-examinations and dental appointments</li>
+<li>An app for all prevention services of the statutory health insurance</li>
+<li>FOCUS health doctor search</li>
+</ul>
 
-<h2>iteratec Services</h2>
-<p>iteratec provided a range of services for the APPzumARZT project. They started with a complete redesign and creation of high-quality click prototypes during the conception phase. By utilizing the cross-platform technology Flutter, iteratec was able to save development costs for both iOS and Android platforms. The seamless connection of external services from partners, such as the FOCUS health doctor search, was also facilitated by iteratec.</p>
-<p>Data protection was a priority, and iteratec ensured the local storage of user data for the best possible security. They also successfully migrated user data from the previous app to the new platform. Ongoing deployment of the app during development allowed for quick feedback from testers, ensuring a smooth and user-friendly experience. Automation of tests for calculating statutory preventive services further simplified the development process and ensured the app's stable operation.</p>
+<h2>iteratec services</h2>
+<ul>
+<li>Complete redesign and creation of high-quality click prototypes in the conception phase</li>
+<li>Saving of development costs for iOS and Android by using the cross-platform technology Flutter</li>
+<li>Seamless connection of external services from partners</li>
+<li>Local storage of the data - for the best possible data protection</li>
+<li>Migration of user data from previous app</li>
+<li>Ongoing deployment of the app during development for quick feedback from testers</li>
+<li>Automation of the tests for calculating statutory preventive services - for the simplest possible further development and for stable operation of the app</li>
+</ul>
 
 <h2>Challenge</h2>
-<p>The main challenge of the project was to develop an app that is highly user-friendly and understandable, encouraging more people to utilize the preventive services offered by statutory health insurance companies. The goal was to create greater awareness of preventive health measures and promote a proactive approach to healthcare. By addressing this challenge, the APPzumARZT app aims to improve overall health outcomes and help individuals retain their bonus benefits.</p>
+<p>Develop an app that is so user-friendly and understandable that more people use the preventive services of statutory health insurance companies and thus create greater awareness of preventive health measures.</p>
 
-<h2>Summary</h2>
-<p>The APPzumARZT project by iteratec for the customer [CUSTOMER] is a user-friendly app that serves as an automatic health manager. It reminds users of all their preventive measures, including vaccinations, U/J examinations, and dental appointments. The app consolidates all prevention services offered by statutory health insurance companies and includes the FOCUS health doctor search for easy access to healthcare professionals. iteratec provided a complete redesign and creation of high-quality click prototypes, utilizing the cross-platform technology Flutter to save development costs. They ensured data protection through local storage and successfully migrated user data from the previous app. Ongoing deployment and automation of tests further enhanced the app's development and operation. The project's challenge was to create an app that promotes greater awareness of preventive health measures and encourages more people to utilize the services offered by statutory health insurance companies. By addressing this challenge, the APPzumARZT app aims to improve overall health outcomes and help individuals retain their bonus benefits.</p>
-
+<p>In summary, the APPzumARZT is an innovative app that serves as an automatic health manager, reminding users of important preventive measures, vaccinations, and appointments. It offers added value for both the customer and the end user, providing a comprehensive solution for all prevention services of statutory health insurance. With the expertise and services provided by iteratec, the development of the app has been streamlined and efficient. The challenge of increasing awareness and utilization of preventive health measures is addressed through the user-friendly design and functionality of the app.</p>
 </body>
 </html>

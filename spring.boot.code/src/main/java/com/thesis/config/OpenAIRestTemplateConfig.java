@@ -1,15 +1,25 @@
 package com.thesis.config;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
+@Getter
+@Setter
 @Configuration
 public class OpenAIRestTemplateConfig {
     @Value("${openai.api.key}")
     private String openaiApiKey;
+
+    @Value("${openai.model}")
+    private String model;
+
+    @Value("${openai.api.url}")
+    private String apiUrl;
 
     @Bean
     @Qualifier("openaiRestTemplate")
