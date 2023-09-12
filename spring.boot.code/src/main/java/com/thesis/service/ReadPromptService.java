@@ -13,26 +13,35 @@ import java.util.List;
 public class ReadPromptService {
     private final static String BASE_PATH = Path.of("src", "main", "resources", "Prompts").toString();
 
-    public List<String> prompts() {
+
+    public List<String> prompts(String option) {
         List<String> prompts = new ArrayList<>();
 
-        ;
         // read prompts from text file
         String promptFilePath = Path.of(BASE_PATH, "zeroShot", "prompt.txt").toString();
-        String descriptionFilePath =Path.of(BASE_PATH, "projectDescription1.txt").toString();
 
         try {
             String prompt = readTextFile(promptFilePath);
-            String description = readTextFile(descriptionFilePath);
-
             prompts.add(prompt);
-            prompts.add("[PROJECTINFORMATION]: " + description);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        String additionalPrompt = "Generate the output in HTML format.";
+        String outputStyle = "";
 
+        switch (option) {
+            case "twitter":
+                outputStyle = "Generate the article in twitter style.";
+                break;
+            case "abstract":
+                outputStyle = "Generate an abstract of the article.";
+                break;
+            case "longArticle":
+                break;
+        }
+
+        String additionalPrompt = "Generate the output in HTML format.";
+        prompts.add(outputStyle);
         prompts.add(additionalPrompt);
 
         return prompts;

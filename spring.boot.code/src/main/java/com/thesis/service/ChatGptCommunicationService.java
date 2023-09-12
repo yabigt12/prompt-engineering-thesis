@@ -47,7 +47,7 @@ public class ChatGptCommunicationService {
         return response;
     }
 
-    private static void writeTextFile(String filePath, String content) throws IOException {
+    private void writeTextFile(String filePath, String content) throws IOException {
         try (FileWriter fileWriter = new FileWriter(filePath)) {
             fileWriter.write(content);
         }

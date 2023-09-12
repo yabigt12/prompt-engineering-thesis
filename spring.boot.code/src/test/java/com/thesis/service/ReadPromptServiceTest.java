@@ -16,7 +16,7 @@ import static org.mockito.Mockito.verify;
 
 class ReadPromptServiceTest {
 
-  private ReadPromptService mockedReadPromptService = Mockito.spy(ReadPromptService.class);
+  private final ReadPromptService mockedReadPromptService = Mockito.spy(ReadPromptService.class);
 
   @SneakyThrows
   @Test
@@ -24,14 +24,14 @@ class ReadPromptServiceTest {
     doReturn("test").when(mockedReadPromptService).readTextFile(anyString()); // works with mock AND spy
     // when(mockedReadPromptService.readTextFile(anyString())).thenReturn("test");  // DOES NOT WORK WITH SPY
 
-    List<String> prompts = mockedReadPromptService.prompts();
+    List<String> prompts = mockedReadPromptService.prompts("twitter");
 
     assertThat(prompts).isNotNull();
     assertThat(prompts).hasSize(3);
-    assertThat(prompts.get(1)).contains("[PROJECTINFORMATION]:");
+    assertThat(prompts.get(1)).contains("twitter");
     assertThat(prompts.get(2)).containsAnyOf("Generate", "output", "HTML");
 
-    verify(mockedReadPromptService, times(2)).readTextFile(anyString());
+    verify(mockedReadPromptService, times(1)).readTextFile(anyString());
   }
 
   @SneakyThrows
