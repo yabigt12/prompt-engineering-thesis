@@ -4,7 +4,8 @@ import React, {useEffect, useState} from "react";
 function App() {
     const [inputText, setInputText] = useState('');
     const [message, setMessage] = useState('');
-    const [selectedOption, setSelectedOption] = useState('');
+    const [selectedOption, setSelectedOption] = useState('longArticle');
+    const [selectedLanguage, setSelectedLanguage] = useState('english');
     const [isLoading, setLoading] = useState(false);
 
     const handleSubmit = (event) => {
@@ -16,7 +17,7 @@ function App() {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ projectDescription: inputText, option: selectedOption }),
+            body: JSON.stringify({ projectDescription: inputText, option: selectedOption, language: selectedLanguage }),
         }) // Replace with the URL of your Spring Boot endpoint
             .then((response) => {
                 if (!response.ok) {
@@ -79,6 +80,18 @@ function App() {
                           onChange={() => setSelectedOption('longArticle')}
                       />
                       Long Article
+                  </label>
+              </div>
+              <div>
+                  <label>
+                      Language:-
+                      <select
+                          value={selectedLanguage}
+                          onChange={(e) => setSelectedLanguage(e.target.value)}
+                      >
+                          <option value="english">English</option>
+                          <option value="german">German</option>
+                      </select>
                   </label>
               </div>
               <button type="submit" disabled={isLoading}>Generate article</button>

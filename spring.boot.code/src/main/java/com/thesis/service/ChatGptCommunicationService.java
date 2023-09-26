@@ -12,6 +12,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 @AllArgsConstructor
@@ -23,11 +24,19 @@ public class ChatGptCommunicationService {
     public String apiCall(List<String> prompts) {
         ChatRequest request = new ChatRequest(openAIRestTemplateConfig.getModel(), 0);
         List<Message> messages = new ArrayList<>();
+
+        System.out.println("Prompts: " + prompts);
         for (String prompt : prompts) {
+            if(Objects.equals(prompt, prompts.get(0))) {
+               // messages.add(new Message("system", prompt));
+                continue;
+            }
             messages.add(new Message("user", prompt));
         }
+
+        System.out.println("Messages: " + messages);
         request.setMessages(messages);
-        restTemplate.postForObject(openAIRestTemplateConfig.getApiUrl(), request, ChatResponse.class);
+        
         ChatResponse chatResponse = restTemplate.postForObject(openAIRestTemplateConfig.getApiUrl(), request, ChatResponse.class);
 
         if (chatResponse == null || chatResponse.getChoices() == null || chatResponse.getChoices().isEmpty()) {
@@ -47,7 +56,7 @@ public class ChatGptCommunicationService {
         return response;
     }
 
-    private void writeTextFile(String filePath, String content) throws IOException {
+    void writeTextFile(String filePath, String content) throws IOException {
         try (FileWriter fileWriter = new FileWriter(filePath)) {
             fileWriter.write(content);
         }

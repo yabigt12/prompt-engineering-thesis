@@ -1,7 +1,7 @@
 package com.thesis.controller;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.JsonNodeFactory;
+import com.thesis.dto.GenerateArticle;
+import com.thesis.dto.GenerateArticleResponse;
 import com.thesis.service.ChatGptCommunicationService;
 import com.thesis.service.ReadPromptService;
 import lombok.AllArgsConstructor;
@@ -20,16 +20,17 @@ public class ChatController {
     private final ReadPromptService readPromptService;
 
     @PostMapping("/generateArticle")
-    public ResponseEntity<JsonNode> generateArticle(@RequestBody JsonNode requestData) {
-        if (requestData.has("projectDescription") && requestData.has("option")) {
-            String inputText = requestData.get("projectDescription").asText();
-            String option = requestData.get("option").asText();
-            List<String> prompts = readPromptService.prompts(option);
-            prompts.add("[PROJECTINFORMATION]: <<" + inputText + " >>");
+    public ResponseEntity<GenerateArticleResponse> generateArticle(@RequestBody GenerateArticle requestData) {
+        if (requestData != null && requestData.getProjectDescription() != null
+                && requestData.getOption() != null && requestData.getLanguage() != null) {
+            List<String> prompts = readPromptService.prompts(requestData);
             String generatedArticle = chatGptCommunicationService.apiCall(prompts);
-            return ResponseEntity.ok(JsonNodeFactory.instance.objectNode().put("article", generatedArticle));
+
+            GenerateArticleResponse response = new GenerateArticleResponse();
+            response.setArticle(generatedArticle);
+            return ResponseEntity.ok(response);
         } else {
-            return ResponseEntity.badRequest().body(JsonNodeFactory.instance.objectNode().put("error", "Invalid JSON structure"));
+            return ResponseEntity.badRequest().body(null);
         }
     }
 }

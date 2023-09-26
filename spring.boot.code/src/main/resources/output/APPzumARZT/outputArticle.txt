@@ -1,40 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Article: Project with Iteratec and [CUSTOMER]</title>
+<title>Project Description</title>
 </head>
 <body>
-<h1>[PROJECT INFORMATION]</h1>
-<p>Project Description Long: Who knows whether their vaccination status is right, when another dentist appointment is due or when cancer screening is due? Even we felt the same way. That's why we invented the APPzumARZT. It keeps track of your prevention status, reminds you of check-ups, vaccinations and dental checks, helping you to retain your bonus benefits and - of course - to stay healthy. And with the integrated FOCUS-Gesundheit doctor search, you can find the right doctor right away. The APPzumARZT is the automatic health manager that reminds you of all vaccinations, preventive measures, U/J examinations and dental appointments. An app for all prevention services of your statutory health insurance. It doesn't matter which one! Including the FOCUS health doctor search.</p>
-<p>Project Description Short: All prevention appointments. In an app. For the whole family.</p>
-<p>Challenge: Develop an app that is so user-friendly and understandable that more people use the preventive services of statutory health insurance companies and thus create greater awareness of preventive health measures.</p>
-
-<h2>Added value for the customer</h2>
-<ul>
-<li></li>
-</ul>
-
-<h2>Added value for the end customer / user</h2>
-<ul>
-<li>Automatic health manager for reminders of all vaccinations, preventive measures, U-/J-examinations and dental appointments</li>
-<li>An app for all prevention services of the statutory health insurance</li>
-<li>FOCUS health doctor search</li>
-</ul>
-
-<h2>Iteratec services</h2>
-<ul>
-<li>Complete redesign and creation of high-quality click prototypes in the conception phase</li>
-<li>Saving of development costs for iOS and Android by using the cross-platform technology Flutter</li>
-<li>Seamless connection of external services from partners</li>
-<li>Local storage of the data - for the best possible data protection</li>
-<li>Migration of user data from previous app</li>
-<li>Ongoing deployment of the app during development for quick feedback from testers</li>
-<li>Automation of the tests for calculating statutory preventive services - for the simplest possible further development and for stable operation of the app</li>
-</ul>
-
-<p>Topics / Technologies: Flutter, SQLite, Android, iOS</p>
-
-<p>Summary: The APPzumARZT project developed by Iteratec in collaboration with [CUSTOMER] aims to provide a user-friendly and comprehensive app for managing preventive health measures. The app serves as an automatic health manager, reminding users of vaccinations, check-ups, and dental appointments. It also includes a doctor search feature for easy access to healthcare providers. Iteratec's services include redesigning the app, utilizing cross-platform technology, seamless integration of external services, data migration, and ongoing deployment for feedback. The project addresses the challenge of increasing awareness and utilization of preventive health services offered by statutory health insurance companies.</p>
-
+<h1>Project Description</h1>
+<p><strong>Long Description:</strong> "Who knows whether their vaccination status is right, when another dentist appointment is due or when cancer screening is due? Even we felt the same way. That's why we invented the APPzumARZT. It keeps track of your prevention status, reminds you of check-ups, vaccinations and dental checks, helping you to retain your bonus benefits and - of course - to stay healthy. And with the integrated FOCUS-Gesundheit doctor search, you can find the right doctor right away. The APPzumARZT is the automatic health manager that reminds you of all vaccinations, preventive measures, U/J examinations and dental appointments. An app for all prevention services of your statutory health insurance. It doesn't matter which one! Including the FOCUS health doctor search."</p>
+<p><strong>Short Description:</strong> "All prevention appointments. In an app. For the whole family."</p>
+<p><strong>Challenge:</strong> "Develop an app that is so user-friendly and understandable that more people use the preventive services of statutory health insurance companies and thus create greater awareness of preventive health measures."</p>
+<p><strong>Added value for the end customer / user:</strong> Automatic health manager for reminders of all vaccinations, preventive measures, U-/J-examinations and dental appointments. An app for all prevention services of the statutory health insurance. FOCUS health doctor search.</p>
+<p><strong>iteratec services:</strong> Complete redesign and creation of high-quality click prototypes in the conception phase. Saving of development costs for iOS and Android by using the cross-platform technology Flutter. Seamless connection of external services from partners. Local storage of the data - for the best possible data protection. Migration of user data from previous app. Ongoing deployment of the app during development for quick feedback from testers. Automation of the tests for calculating statutory preventive services - for the simplest possible further development and for stable operation of the app.</p>
+<p><strong>Topics / Technologies:</strong> Flutter, SQLite, Android, iOS</p>
 </body>
 </html>
