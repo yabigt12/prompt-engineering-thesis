@@ -1,12 +1,11 @@
 package com.thesis.service;
 
-import java.nio.file.Path;
-
-import com.thesis.dto.GenerateArticle;
-import org.springframework.stereotype.Service;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.nio.file.Path;
+
+import org.springframework.stereotype.Service;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +16,7 @@ public class ReadPromptService {
     private final static String BASE_PATH = Path.of("src", "main", "resources", "Prompts").toString();
 
 
-    public List<String> prompts(GenerateArticle generateArticle) {
+    public List<String> prompts(String projectDescription, String option, String language) {
         List<String> prompts = new ArrayList<>();
 
         // read prompts from text file
@@ -25,16 +24,15 @@ public class ReadPromptService {
         String systemMessageFilePath = Path.of(BASE_PATH, "systemMessage.txt").toString();
 
         String outputStyle = "";
-        String language = "";
+        String selectedLanguage = "";
 
         try {
             String systemMessage = readTextFile(systemMessageFilePath);
             prompts.add(systemMessage);
 
-            String projectDescription = generateArticle.getProjectDescription();
             prompts.add(projectDescription);
 
-            switch (generateArticle.getOption()) {
+            switch (option) {
                 case "twitter" ->
                         outputStyle = "Generate the content in twitter format.";
                 case "abstract" ->
@@ -48,11 +46,11 @@ public class ReadPromptService {
             e.printStackTrace();
         }
 
-        if (Objects.equals(generateArticle.getLanguage(), "german"))
-            language = "generate the article in german";
+        if (Objects.equals(language, "german"))
+            selectedLanguage = "generate the article in german";
 
         String additionalPrompt = "Generate the output in HTML format.";
-        prompts.add(language);
+        prompts.add(selectedLanguage);
         prompts.add(additionalPrompt);
 
         return prompts;

@@ -4,8 +4,8 @@ import com.thesis.dto.GenerateArticle;
 import com.thesis.dto.GenerateArticleResponse;
 import com.thesis.service.ChatGptCommunicationService;
 import com.thesis.service.ReadPromptService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,17 +20,13 @@ public class ChatController {
     private final ReadPromptService readPromptService;
 
     @PostMapping("/generateArticle")
-    public ResponseEntity<GenerateArticleResponse> generateArticle(@RequestBody GenerateArticle requestData) {
-        if (requestData != null && requestData.getProjectDescription() != null
-                && requestData.getOption() != null && requestData.getLanguage() != null) {
-            List<String> prompts = readPromptService.prompts(requestData);
-            String generatedArticle = chatGptCommunicationService.apiCall(prompts);
+    public GenerateArticleResponse generateArticle(@Valid @RequestBody GenerateArticle requestData) {
+        List<String> prompts = readPromptService.prompts(requestData.getProjectDescription(),
+                requestData.getOption(), requestData.getLanguage());
+        String generatedArticle = chatGptCommunicationService.callChatGPT(prompts);
 
-            GenerateArticleResponse response = new GenerateArticleResponse();
-            response.setArticle(generatedArticle);
-            return ResponseEntity.ok(response);
-        } else {
-            return ResponseEntity.badRequest().body(null);
-        }
+        GenerateArticleResponse response = new GenerateArticleResponse();
+        response.setArticle(generatedArticle);
+        return response;
     }
 }

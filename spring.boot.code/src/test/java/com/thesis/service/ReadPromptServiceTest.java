@@ -24,7 +24,7 @@ class ReadPromptServiceTest {
     doReturn("test").when(mockedReadPromptService).readTextFile(anyString()); // works with mock AND spy
     // when(mockedReadPromptService.readTextFile(anyString())).thenReturn("test");  // DOES NOT WORK WITH SPY
 
-    List<String> prompts = mockedReadPromptService.prompts("twitter");
+    List<String> prompts = mockedReadPromptService.prompts("projectDescription", "twitter", "english");
 
     assertThat(prompts).isNotNull();
     assertThat(prompts).hasSize(3);

@@ -47,7 +47,7 @@ class ChatGptCommunicationServiceTest {
             .thenReturn(mockResponse);
 
     // Act
-    String response = chatGptCommunicationService.apiCall(prompts);
+    String response = chatGptCommunicationService.callChatGPT(prompts);
 
     // Assert
     assertNotNull(response);

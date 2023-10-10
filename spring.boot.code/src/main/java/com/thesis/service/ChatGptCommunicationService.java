@@ -8,7 +8,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +20,9 @@ public class ChatGptCommunicationService {
     private final RestTemplate restTemplate;
     private final OpenAIRestTemplateConfig openAIRestTemplateConfig;
 
-    public String apiCall(List<String> prompts) {
+    private final WriteTextFileService writeAndReadTextFileService;
+
+    public String callChatGPT(List<String> prompts) {
         ChatRequest request = new ChatRequest(openAIRestTemplateConfig.getModel(), 0);
         List<Message> messages = new ArrayList<>();
 
@@ -43,22 +44,16 @@ public class ChatGptCommunicationService {
             return "No response";
         }
 
-        String response = chatResponse.getChoices().get(0).getMessage().getContent();
+        String content = chatResponse.getChoices().get(0).getMessage().getContent();
 
         // write output to a text file
         String outputPath = "src/main/resources/output/APPzumARZT/outputArticle.txt";
         try {
-            writeTextFile(outputPath, response);
+            writeAndReadTextFileService.writeTextFile(outputPath, content);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return response;
-    }
-
-    void writeTextFile(String filePath, String content) throws IOException {
-        try (FileWriter fileWriter = new FileWriter(filePath)) {
-            fileWriter.write(content);
-        }
+        return content;
     }
 }
