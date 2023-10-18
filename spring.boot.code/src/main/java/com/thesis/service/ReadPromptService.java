@@ -1,20 +1,19 @@
 package com.thesis.service;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.nio.file.Path;
 
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 @Service
+@AllArgsConstructor
 public class ReadPromptService {
+    private final TextFileService textFileService;
     private final static String BASE_PATH = Path.of("src", "main", "resources", "Prompts").toString();
-
 
     public List<String> prompts(String projectDescription, String option, String language) {
         List<String> prompts = new ArrayList<>();
@@ -26,25 +25,21 @@ public class ReadPromptService {
         String outputStyle = "";
         String selectedLanguage = "";
 
-        try {
-            String systemMessage = readTextFile(systemMessageFilePath);
-            prompts.add(systemMessage);
+        String systemMessage = textFileService.readTextFile(systemMessageFilePath);
+        prompts.add(systemMessage);
 
-            prompts.add(projectDescription);
+        prompts.add(projectDescription);
 
-            switch (option) {
-                case "twitter" ->
-                        outputStyle = "Generate the content in twitter format.";
-                case "abstract" ->
-                        outputStyle = "write an abstract description of the article about the project of the development company Iteratec with the customer.";
-                case "longArticle" ->
-                        outputStyle = readTextFile(promptFilePath);
-            }
-
-            prompts.add(outputStyle);
-        } catch (IOException e) {
-            e.printStackTrace();
+        switch (option) {
+            case "twitter" ->
+                    outputStyle = "Generate the content in twitter format.";
+            case "abstract" ->
+                    outputStyle = "write an abstract description of the article about the project of the development company Iteratec with the customer.";
+            case "longArticle" ->
+                    outputStyle = textFileService.readTextFile(promptFilePath);
         }
+
+        prompts.add(outputStyle);
 
         if (Objects.equals(language, "german"))
             selectedLanguage = "generate the article in german";
@@ -56,17 +51,4 @@ public class ReadPromptService {
         return prompts;
     }
 
-    String readTextFile(String filePath) throws IOException {
-        StringBuilder content = new StringBuilder();
-
-        try (FileReader fileReader = new FileReader(filePath);
-             BufferedReader bufferedReader = new BufferedReader(fileReader)) {
-            String line;
-            while ((line = bufferedReader.readLine()) != null) {
-                content.append(line).append("\n");
-            }
-        }
-
-        return content.toString();
-    }
 }
