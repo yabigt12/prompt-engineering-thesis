@@ -1,0 +1,18 @@
+I would like you to write the fourth part of an article using the project description I provided. It should have the following structure:
+-	It should have a title labled "Challenges"
+-	It should include the challenges faced when doing the project
+-	it should have bullet points and a small explanation of each points
+-	it should not be more than 150 words
+-	Here Is an example from another project:
+Example 1: <<
+Challenges
+•	Multifaceted Team: Coordinating a diverse team responsible for numerous applications spanning various departments can pose coordination and communication challenges.
+•	Interdepartmental Integration: Ensuring seamless integration and collaboration among different departments with varying priorities and objectives can be a complex undertaking.
+•	Resource Management: Effectively managing resources to meet the demands of numerous applications is a continual challenge in maintaining efficiency and productivity.
+>>
+Example 2: <<
+Challenges
+•	Penetrations in the Infrastructure for Communication Between Monitoring Components: The integration of monitoring components within a complex infrastructure can present challenges related to network security and data transmission. Ensuring secure and reliable communication while maintaining the integrity of the infrastructure is crucial.
+•	Collection of RED (Rate, Error, Duration) Metrics with Asynchronous HTTP Client (Netty): Utilizing asynchronous HTTP clients like Netty for collecting RED metrics introduces its own set of challenges. Handling asynchronous data collection efficiently and accurately requires a deep understanding of the underlying technology.
+•	Lack of Influence on Timeliness of Managed Monitoring Components (Grafana/Prometheus) and Feature Availability Restrictions: When dealing with managed solutions such as Grafana and Prometheus, there can be limitations on the timeliness of updates and the availability of the latest features. This challenge revolves around aligning your monitoring needs with the capabilities provided by these managed components, often requiring creative solutions to bridge any gaps.
+>>

@@ -1,0 +1,12 @@
+I would like you to write the fourth part of an article using the project description I provided. It should have the following structure:
+-	It should have a title labled "Challenges"
+-	It should include the challenges faced when doing the project
+-	it should have bullet points and a small explanation of each points
+-	it should not be more than 150 words
+-	Here Is an example from another project:
+Example 1: <<
+Challenges
+•	Multifaceted Team: Coordinating a diverse team responsible for numerous applications spanning various departments can pose coordination and communication challenges.
+•	Interdepartmental Integration: Ensuring seamless integration and collaboration among different departments with varying priorities and objectives can be a complex undertaking.
+•	Resource Management: Effectively managing resources to meet the demands of numerous applications is a continual challenge in maintaining efficiency and productivity.
+>>

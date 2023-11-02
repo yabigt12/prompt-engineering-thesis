@@ -6,7 +6,7 @@
                              The APPzumARZT is the automatic health manager that reminds you of all vaccinations, preventive measures, U/J examinations and dental appointments.
                              An app for all prevention services of your statutory health insurance. It doesn't matter which one! Including the FOCUS health doctor search.",
 "Project description short": "All prevention appointments. In an app. For the whole family.",
-"Challenge": "Develop an app that is so user-friendly and understandable that more people use the preventive services of statutory health insurance companies
+"Challenges": "Develop an app that is so user-friendly and understandable that more people use the preventive services of statutory health insurance companies
               and thus create greater awareness of preventive health measures..",
 "Added value for the customer": "",
 "Added value for the end customer / user": " Automatic health manager for reminders of all vaccinations, preventive measures, U-/J-examinations and dental appointments

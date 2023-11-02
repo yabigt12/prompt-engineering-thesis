@@ -1,12 +1,10 @@
-I would like you to write an article about a project. First, I'll provide you with some information about the project.
-Then some instructions of how the article should be structured.
-
-Here are some instruction for the structure of the article if you are generating a long article. It is important that the article follows the following structure exactly. Each point must be included in the article.
-1. The title of the article should be the name of the project.
-2. Start the article with a paragraph describing what the project is about. This should be atleast 5 sentences
-3. There should be a sub header 'Added value for the customer' if given.
-4. There should be a sub header 'Added value for the end user' if given.
-5. There should be a sub header 'iteratec services' if given.
-6. There should be a sub header 'challenge' if given.
-7. Each sub header should contain bullet points with small explanation with at least 3 sentences.
-8. the last paragraph should be a summary.
+I would like you to generate a long article about a project using the project description
+provided. Here are some instructions on how the article should be structured. It is important
+that the article follows the following structure exactly. Each point must be included in the article.
+-	The article generated should not be more than 300 words.
+-	The title of the article should be the name of the project.
+-	Start the article with an introductory paragraph to the project.
+-	The article should have a sub header “Added value for the customer”.
+-	The article should have a sub header “Iteratec services”.
+-	The article should have a sub header “Challenges”.
+-	Each sub header should contain bullet points with small explanation.

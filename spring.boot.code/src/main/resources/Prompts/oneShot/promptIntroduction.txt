@@ -1,0 +1,11 @@
+I would like you to write the first introductory paragraph of an article using the project description provided. It should describe what the project is about.
+It should answer the following questions:
+-	What is special about the project? Why do we need the project?
+-	What about the project might interest other potential customers?
+-	Which of our core messages can we convey here?
+-	It should be not be more than 80 words
+-	Here Is an example of an introduction paragraph of another project:
+Example 1: <<
+AppManufaktur
+
+AppManufaktur, the collaborative brainchild of Mercedes-Benz and iteratec, represents an innovative leap towards a fully digitized future in automotive manufacturing. Pioneering a transformation that transcends traditional, paper-based workflows, this interdisciplinary team has diligently crafted a suite of applications and services tailored to diverse production roles. Anchored by the "proplan" basic system, their applications redefine production planning, development, and logistics through digital integration. Starting with "SRA" in 2015, AppManufaktur's apps, designed to bridge the gaps in the digitized working world, have since expanded to encompass pivotal tools like "Drift" for personnel planning and "KI-iLOG" for AI-driven logistics planning. These innovations collectively empower the automotive industry, offering enhanced reliability, ease, and security in the digital age of work.>>

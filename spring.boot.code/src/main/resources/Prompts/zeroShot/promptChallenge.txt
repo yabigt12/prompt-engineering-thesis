@@ -1,11 +1,5 @@
-I would like you to write the fourth part of an article. The software development company iteratec has implemented a
-project for the customer [CUSTOMER]. First, I'll provide you with a summary of the project.
-Then an explanation of what information should be included in the paragraph.
-
-The following information about the project is available:
-[PROJECT INFORMATION]
-
-This part should have a sub header labled ""Challenge"".
-Each bullet point should have atleast 3 sentences with more explanation.
-
-Write the second part of an article about the project of the development company Iteratec with the customer [CUSTOMER]. Follow the guidelines exactly.
+I would like you to write the fourth part of an article using the project description I provided. It should have the following structure:
+-	It should have a title labled "Challenges"
+-	It should include the challenges faced when doing the project
+-	it should have bullet points and a small explanation of each points
+-	it should not be more than 150 words
