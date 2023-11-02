@@ -18,34 +18,35 @@ public class ReadPromptService {
     public List<String> prompts(String projectDescription, String option, String language) {
         List<String> prompts = new ArrayList<>();
 
-        // read prompts from text file
+        // read prompts zero shot prompt
         String promptFilePath = Path.of(BASE_PATH, "zeroShot", "prompt.txt").toString();
-        String systemMessageFilePath = Path.of(BASE_PATH, "systemMessage.txt").toString();
 
-        String outputStyle = "";
-        String selectedLanguage = "";
+        // read prompts one shot prompt
+       // String promptFilePath = Path.of(BASE_PATH, "oneShot", "prompt.txt").toString();
 
-        String systemMessage = textFileService.readTextFile(systemMessageFilePath);
-        prompts.add(systemMessage);
+        // read prompts two shot prompt
+       // String promptFilePath = Path.of(BASE_PATH, "twoShot", "prompt.txt").toString();
+
+        String twittorPrompt = "Generate the content in twitter format.";
+        String abstractPrompt = "write an abstract description of the article about the project of the development company Iteratec with the customer.";
+        String longArticlePrompt = textFileService.readTextFile(promptFilePath);
+        String germanPrompt = "Generate the article in german.";
+        String additionalPrompt = "Generate the output in HTML format.";
 
         prompts.add(projectDescription);
 
         switch (option) {
             case "twitter" ->
-                    outputStyle = "Generate the content in twitter format.";
+                    prompts.add(twittorPrompt);
             case "abstract" ->
-                    outputStyle = "write an abstract description of the article about the project of the development company Iteratec with the customer.";
+                    prompts.add(abstractPrompt);
             case "longArticle" ->
-                    outputStyle = textFileService.readTextFile(promptFilePath);
+                    prompts.add(longArticlePrompt);
         }
 
-        prompts.add(outputStyle);
-
         if (Objects.equals(language, "german"))
-            selectedLanguage = "generate the article in german";
+            prompts.add(germanPrompt);
 
-        String additionalPrompt = "Generate the output in HTML format.";
-        prompts.add(selectedLanguage);
         prompts.add(additionalPrompt);
 
         return prompts;

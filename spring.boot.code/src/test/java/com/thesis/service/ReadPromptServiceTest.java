@@ -1,52 +1,71 @@
 package com.thesis.service;
 
-import java.io.IOException;
-import java.nio.file.Path;
-import java.util.List;
-import lombok.SneakyThrows;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
+
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ReadPromptServiceTest {
+  private final String PROJECT_DESCRIPTION = "This is a project description";
+  private final String LONG_ARTICLE_OPTION = "longArticle";
+  private final String ENGLISH_LANGUAGE = "english";
 
-  private final ReadPromptService mockedReadPromptService = Mockito.spy(ReadPromptService.class);
 
-  @SneakyThrows
-  @Test
-  void shouldReturn_whenPrompts() {
-    doReturn("test").when(mockedReadPromptService).readTextFile(anyString()); // works with mock AND spy
-    // when(mockedReadPromptService.readTextFile(anyString())).thenReturn("test");  // DOES NOT WORK WITH SPY
+  private ReadPromptService readPromptService;
 
-    List<String> prompts = mockedReadPromptService.prompts("projectDescription", "twitter", "english");
-
-    assertThat(prompts).isNotNull();
-    assertThat(prompts).hasSize(3);
-    assertThat(prompts.get(1)).contains("twitter");
-    assertThat(prompts.get(2)).containsAnyOf("Generate", "output", "HTML");
-
-    verify(mockedReadPromptService, times(1)).readTextFile(anyString());
-  }
-
-  @SneakyThrows
-  @Test
-  void shouldReturn_whenReadTextFile_givenValidPath() {
-    String PATH = Path.of("src", "main", "resources", "Prompts", "zeroShot", "prompt.txt").toString();
-
-    String result = mockedReadPromptService.readTextFile(PATH);
-
-    assertThat(result).isNotNull();
+  @BeforeEach
+  void setUp() {
+    readPromptService = new ReadPromptService(new TextFileService());
   }
 
   @Test
-  void shouldThrowException_whenReadTextFile_givenInvalidPath() {
-    assertThrows(IOException.class,
-      () -> mockedReadPromptService.readTextFile("_unknown path_"));
+  void testTwittorFormatOption() {
+    String twitterOption = "twitter";
+    List<String> prompts = readPromptService.prompts(PROJECT_DESCRIPTION, twitterOption, ENGLISH_LANGUAGE);
+
+    assertEquals(3, prompts.size());
+
+    assertEquals("This is a project description", prompts.get(0));
+    assertEquals("Generate the content in twitter format.", prompts.get(1));
+    assertEquals("Generate the output in HTML format.", prompts.get(2));
+  }
+
+  @Test
+  void testAbstractFormatOption() {
+
+    String abstractOption = "abstract";
+    List<String> prompts = readPromptService.prompts(PROJECT_DESCRIPTION, abstractOption, ENGLISH_LANGUAGE);
+
+    assertEquals(3, prompts.size());
+
+    assertEquals("This is a project description", prompts.get(0));
+    assertEquals("write an abstract description of the article about the project of the development company Iteratec with the customer.", prompts.get(1));
+    assertEquals("Generate the output in HTML format.", prompts.get(2));
+  }
+
+  @Test
+  void testLongArticleFormatOption() {
+
+    List<String> prompts = readPromptService.prompts(PROJECT_DESCRIPTION, LONG_ARTICLE_OPTION, ENGLISH_LANGUAGE);
+
+    assertEquals(3, prompts.size());
+
+    assertEquals("This is a project description", prompts.get(0));
+    assertThat(prompts.get(1)).containsAnyOf("I would like you to generate a long article");
+    assertEquals("Generate the output in HTML format.", prompts.get(2));
+  }
+
+  @Test
+  void testGermanLanguageOption() {
+
+    String germanLanguage = "german";
+    List<String> prompts = readPromptService.prompts(PROJECT_DESCRIPTION, LONG_ARTICLE_OPTION, germanLanguage);
+
+    assertEquals(4, prompts.size());
+
+    assertEquals("Generate the article in german.", prompts.get(2));
   }
 }

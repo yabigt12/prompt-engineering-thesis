@@ -10,7 +10,6 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @Service
 @AllArgsConstructor
@@ -26,10 +25,6 @@ public class ChatGptCommunicationService {
 
         System.out.println("Prompts: " + prompts);
         for (String prompt : prompts) {
-            if(Objects.equals(prompt, prompts.get(0))) {
-               // messages.add(new Message("system", prompt));
-                continue;
-            }
             messages.add(new Message("user", prompt));
         }
 
